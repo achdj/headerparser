@@ -29,7 +29,7 @@ app.get("/api/whoami", function(req, res) {
   var ip = os.networkInterfaces().eth0[0].address;
   var agent = req.headers['user-agent'];
   var langage = req.headers['accept-language'];
-  res.json({ ipaddress: ip, language: langage, software: agent });
+  res.json({"ipaddress": ip, "language": langage, "software": agent });
 });
 
 // listen for requests :)
